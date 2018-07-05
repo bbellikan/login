@@ -1,0 +1,103 @@
+.grid-container {
+  /*display: grid; !* This is a (hacky) way to make the .grid element size to fit its content *!*/
+  margin: 50px auto;
+  width: 800px;
+  overflow: scroll; }
+
+.grid {
+  display: flex;
+  height: 300px;
+  width: 900px; }
+
+.grid-col {
+  position: relative; }
+
+.cell {
+  display: flex;
+  height: 40px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-left: 3px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  /*font-size: 0.8125rem;*/
+  font-size: 1.2rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: rgba(0, 0, 0, 0.87);
+  align-items: center; }
+
+.cell-header {
+  justify-content: left;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  color: gray;
+  background-color: white;
+  z-index: 1; }
+
+.grid-coledit {
+  display: flex;
+  height: 40px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-left: 3px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 1.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: rgba(0, 0, 0, 0.87);
+  align-items: center; }
+
+.input {
+  height: 100%;
+  width: 100%;
+  border: none; }
+
+.container1 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* Hide the browser's default checkbox */
+.container1 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer; }
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px; }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the checkmark when checked */
+.container1 input:checked ~ .checkmark:after {
+  display: block; }
+
+/* Style the checkmark/indicator */
+.container1 .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  border-color: black;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
