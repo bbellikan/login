@@ -1,7 +1,7 @@
 .grid-container {
   /*display: grid; !* This is a (hacky) way to make the .grid element size to fit its content *!*/
   margin: 50px auto;
-  width: 800px;
+  width: 600px;
   overflow: scroll; }
 
 .grid {
@@ -41,7 +41,6 @@
   border-bottom: 1px solid #e0e0e0;
   padding-left: 3px;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-size: 1.5rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -53,7 +52,7 @@
   width: 100%;
   border: none; }
 
-.container1 {
+.containerLabel {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -66,7 +65,7 @@
   user-select: none; }
 
 /* Hide the browser's default checkbox */
-.container1 input {
+.containerLabel input {
   position: absolute;
   opacity: 0;
   cursor: pointer; }
@@ -86,11 +85,11 @@
   display: none; }
 
 /* Show the checkmark when checked */
-.container1 input:checked ~ .checkmark:after {
+.containerLabel input:checked ~ .checkmark:after {
   display: block; }
 
 /* Style the checkmark/indicator */
-.container1 .checkmark:after {
+.containerLabel .checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;

@@ -8,13 +8,13 @@ export default class Menubar extends Component {
         super(props);
 
         this.state = {
-            login: ''
+            loginname: ''
         };
         this.handleChange = this.handleChange.bind(this);
     };
 
     handleChange(e) {
-        this.setState({ login: e.target.value });
+        this.setState({ loginname: e.target.value });
     };
 
     render() {
@@ -39,14 +39,14 @@ export default class Menubar extends Component {
                     <Navbar.Form pullRight>
                         <FormGroup>
                             <FormControl type="text"
-                                         value={this.state.login}
+                                         value={this.state.loginname}
                                          placeholder="Type login to login"
                                          onChange={this.handleChange}
                             />
                         </FormGroup>{' '}
                         <Button type="submit"
-                                onClick={()=>loginaction(this.state.login)}
-                        >Login</Button>
+                                onClick={()=>login==='' ? loginaction(this.state.loginname) : logoutaction()}
+                        >{login==='' ? 'Login':'Logout'}</Button>
                     </Navbar.Form>
                 </Navbar.Collapse>
 

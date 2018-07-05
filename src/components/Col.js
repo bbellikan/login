@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CellHeader from './CellHeader';
 import Editable from './Editable'
+import PropTypes from 'prop-types';
 
 class Col extends Component {
     constructor(props) {
@@ -24,7 +25,6 @@ class Col extends Component {
 
                 <CellHeader 
                     gridCol={this.props.gridCol}
-                    clicked={this.props.clicked}
                     updateClicked={this.props.updateClicked}
                     onRightEdge={this.props.onRightEdge}
                     updateColOrder={this.props.updateColOrder}
@@ -35,9 +35,7 @@ class Col extends Component {
                 {this.props.gridData.map((item,index)=>{
                     return(
                     <Editable
-                        inputClassName="input"
                         key={this.props.gridCol.number + '_' + index}
-                        colNumber={this.props.gridCol.number}
                         gridCol={this.props.gridCol}
                         rowNumber={index}
                         value = {item[this.props.gridCol.header]}
@@ -54,3 +52,14 @@ class Col extends Component {
 }
 
 export default Col;
+
+
+Col.propTypes = {
+    gridCol:PropTypes.object.isRequired,
+    updateClicked:PropTypes.func.isRequired,
+    onRightEdge:PropTypes.func.isRequired,
+    updateColOrder:PropTypes.func.isRequired,
+    updateCell:PropTypes.func.isRequired,
+    updateSort : PropTypes.func.isRequired,
+    deleteCol : PropTypes.func.isRequired
+};

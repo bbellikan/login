@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Editable extends React.Component {
     constructor(props) {
@@ -26,22 +27,22 @@ export default class Editable extends React.Component {
 
     render() {
         let input = this.props.gridCol.inputType === 'checkbox'
-            ? <label className="container1">
-                <input id = {this.props.colNumber + '_' + this.props.rowNumber}
-                       type="checkbox"
+            ? <label className='containerLabel'>
+                <input id = {this.props.gridCol.number + '_' + this.props.rowNumber}
+                       type='checkbox'
                        ref={(input) => {
                            this.inputControl = input;
                        }}
                        onChange={this.onchange_handler}
                        checked={this.props.value ? 'checked' : ''}
                 />
-                <span className="checkmark"
+                <span className='checkmark'
                       onBlur={this.onblur_handler}
                       autoFocus
                 ></span>
             </label>
             : <input type={this.props.gridCol.inputType}
-                     className={this.props.inputClassName}
+                     className='input'
                      ref={(input) => {
                          this.inputControl = input;
                      }}
@@ -53,17 +54,27 @@ export default class Editable extends React.Component {
         if (this.state.isEditing) {
 
             return <div
-                className="cell"
+                className='cell'
             >
                 {input}
             </div>;
         }
 
         return <div
-            className="cell"
+            className='cell'
             onClick={this.onblur_handler}
         >
             {this.props.gridCol.inputType === 'checkbox' ? input :this.props.value}
         </div>;
     }
 }
+
+Editable.propTypes = {
+    gridCol:PropTypes.object.isRequired,
+    rowNumber: PropTypes.number.isRequired,
+    value:PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.string,
+        PropTypes.number]),
+    updateCell:PropTypes.func.isRequired
+};

@@ -5,7 +5,6 @@ export const loginaction = data => ({
     data
 });
 
-export const logoutaction = data => ({
-    type: types.LOGOUT,
-    data
+export const logoutaction = () => ({
+    type: types.LOGOUT
 });

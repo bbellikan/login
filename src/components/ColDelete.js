@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-class ColDelete extends Component {
+export default class ColDelete extends Component {
     constructor(props) {
         super(props);
         this.deleteRow = this.deleteRow.bind(this);
@@ -29,4 +30,6 @@ class ColDelete extends Component {
     }
 }
 
-export default ColDelete;
+ColDelete.propTypes = {
+    deleteRow : PropTypes.func.isRequired
+};

@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import Menubar from '../components/Menubar';
 import {loginaction, logoutaction} from '../actions/login';
 
-import {login} from '../reducers/login';
-
 const LoginContainer = ({
                             login,
                             loginaction,

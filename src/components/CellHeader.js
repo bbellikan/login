@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class CellHeader extends Component {
     constructor(props) {
@@ -85,3 +86,14 @@ export default class CellHeader extends Component {
             )
     }
 }
+
+CellHeader.propTypes = {
+    gridCol:PropTypes.object.isRequired,
+    updateClicked:PropTypes.func.isRequired,
+    onRightEdge:PropTypes.func.isRequired,
+    updateColOrder:PropTypes.func.isRequired,
+    updateSort : PropTypes.func.isRequired,
+    deleteCol : PropTypes.func.isRequired
+};
+
+

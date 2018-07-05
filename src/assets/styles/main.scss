@@ -46,7 +46,7 @@
   border-bottom: 1px solid  rgba(224, 224, 224, 1);
   padding-left: 3px;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-size: 1.2rem;
+  // font-size: 1.2rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -62,7 +62,7 @@
   border: none;
 }
 
-.container1 {
+.containerLabel {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -76,7 +76,7 @@
 }
 
 /* Hide the browser's default checkbox */
-.container1 input {
+.containerLabel input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -102,12 +102,12 @@
 }
 
 /* Show the checkmark when checked */
-.container1 input:checked ~ .checkmark:after {
+.containerLabel input:checked ~ .checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.container1 .checkmark:after {
+.containerLabel .checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;

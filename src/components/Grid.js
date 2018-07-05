@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Col from './Col';
 import ColDelete from './ColDelete';
+import PropTypes from 'prop-types';
 
 class Grid extends Component {
     constructor(props) {
@@ -23,8 +24,8 @@ class Grid extends Component {
         document.addEventListener("mousemove", this.mousemove_handler);
     }
     componentWillUnmount(){
-        document.addEventListener("mouseup", this.mouseup_handler,false);
-        document.addEventListener("mousemove", this.mousemove_handler,false);
+        document.removeEventListener("mouseup", this.mouseup_handler,false);
+        document.removeEventListener("mousemove", this.mousemove_handler,false);
     }
 
     updateClicked(data) {
@@ -49,7 +50,6 @@ class Grid extends Component {
         if(!this.pane) return;
 
         if (this.state.clicked && this.state.clicked.isResizing) {
-            //console.log('preventDefault')
             e.preventDefault();
         }
 
@@ -78,7 +78,6 @@ class Grid extends Component {
                                     key= {'gridCols' + index}
                                     gridCol= {this.props.gridCols[item]}
                                     gridData= {this.props.gridData}
-                                    clicked= {this.state.clicked}
                                     updateClicked= {this.updateClicked}
                                     onRightEdge= {this.onRightEdge}
                                     updateColOrder= {this.props.updateColOrder}
@@ -90,7 +89,6 @@ class Grid extends Component {
                         )}
                         <ColDelete
                             gridData = {this.props.gridData}
-                            gridCol = {this.props.gridCols[5]}
                             deleteRow = {this.props.deleteRow}
                         />
                 </div>
@@ -101,4 +99,14 @@ class Grid extends Component {
 }
 
 export default Grid;
+
+Grid.propTypes = {
+    gridCols:PropTypes.object.isRequired,
+    updateColOrder:PropTypes.func.isRequired,
+    updateColWidth:PropTypes.func.isRequired,
+    deleteRow:PropTypes.func.isRequired,
+    updateCell:PropTypes.func.isRequired,
+    updateSort : PropTypes.func.isRequired,
+    deleteCol : PropTypes.func.isRequired
+};
 
