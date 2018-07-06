@@ -69,12 +69,11 @@
   align-items: center;
 }
 
-
-
 .input {
   height: 100%;
   width: 100%;
   border: none;
+  text-align: left;
 }
 
 .containerLabel {
@@ -106,9 +105,6 @@
   width: 25px;
 }
 
-
-
-
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
@@ -134,12 +130,3 @@
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-///*
-//position: sticky;
-//  position: -webkit-sticky;
-//  top: 0;
-//  background: lightgray;
-//  color: black;
-//  padding-right: 13px;
-//
-//*/

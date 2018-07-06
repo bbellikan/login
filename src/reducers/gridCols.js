@@ -37,7 +37,8 @@ const gridCols = (state = initialState, action) => {
                     deleted: false,
                     type: dataType,
                     inputType: dataType === dataTypes.DATE ? 'date'
-                        : dataType === dataTypes.BOOLEAN ? 'checkbox'
+                    : dataType === dataTypes.BOOLEAN ? 'checkbox'
+                    : dataType === dataTypes.NUMBER ? 'number'
                             : 'text',
                     width: 150
                 };

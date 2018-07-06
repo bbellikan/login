@@ -51,6 +51,7 @@ export const initialState = [{
         date: '2016-11-01'
     }];
 
+
 const gridData = (state = initialState, action) => {
     var newArray;
     switch (action.type) {
