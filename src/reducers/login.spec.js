@@ -1,26 +1,17 @@
-import * as actionTypes from '../constants/actionTypes';
-import dashboard, {initialState} from './login';
+import login, {initialState} from './login';
 
 describe('reducers', () => {
 
     const state =
         {
-            filter: ''
+            login: ''
         };
 
-    describe('dashboard', () => {
+    describe('login', () => {
 
 
         it('should provide the initial state', () => {
-            expect(dashboard(undefined, {})).toBe(initialState);
-        });
-
-        it('should change state when APPLY_FILTER is triggered', () => {
-            expect(dashboard(state, {type: actionTypes.APPLY_FILTER, filter:'someFilter'})).toEqual(
-                {
-                    filter:'someFilter'
-                }
-            );
+            expect(login(undefined, {})).toBe(initialState);
         });
 
     });

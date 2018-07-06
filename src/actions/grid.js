@@ -30,7 +30,11 @@ export const updateCell = (rowNumber, header, value) => ({
 });
 
 export const updateSort = (colNumber) => ({
-        type: types.UPDATE_SORT,
-        colNumber
+    type: types.UPDATE_SORT,
+    colNumber
+});
+
+export const addNew = () => ({
+    type: types.ADD_NEW
 });
 

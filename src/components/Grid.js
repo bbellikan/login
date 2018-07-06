@@ -70,29 +70,35 @@ class Grid extends Component {
     }
     render() {
         return (
-            <div className = 'grid-container' >
-                <div className = 'grid'>
-                        {Object.keys(this.props.gridCols).map((item, index) => {
-                            return (
-                                <Col
-                                    key= {'gridCols' + index}
-                                    gridCol= {this.props.gridCols[item]}
-                                    gridData= {this.props.gridData}
-                                    updateClicked= {this.updateClicked}
-                                    onRightEdge= {this.onRightEdge}
-                                    updateColOrder= {this.props.updateColOrder}
-                                    updateCell = {this.props.updateCell}
-                                    updateSort = {this.props.updateSort}
-                                    deleteCol = {this.props.deleteCol}
-                                />)
-                            }
-                        )}
-                        <ColDelete
-                            gridData = {this.props.gridData}
-                            deleteRow = {this.props.deleteRow}
-                        />
+            <div className = 'pageContainer'>
+                <div className = 'gridAddNew' onClick={this.props.addNew}>
+                    <i className = "fa fa-plus-square"/>{' '}
+                    Add New
                 </div>
+                <div className = 'grid-container' >
+                    <div className = 'grid'>
+                            {Object.keys(this.props.gridCols).map((item, index) => {
+                                return (
+                                    <Col
+                                        key= {'gridCols' + index}
+                                        gridCol= {this.props.gridCols[item]}
+                                        gridData= {this.props.gridData}
+                                        updateClicked= {this.updateClicked}
+                                        onRightEdge= {this.onRightEdge}
+                                        updateColOrder= {this.props.updateColOrder}
+                                        updateCell = {this.props.updateCell}
+                                        updateSort = {this.props.updateSort}
+                                        deleteCol = {this.props.deleteCol}
+                                    />)
+                                }
+                            )}
+                            <ColDelete
+                                gridData = {this.props.gridData}
+                                deleteRow = {this.props.deleteRow}
+                            />
+                    </div>
 
+                </div>
             </div>
         );
     }
@@ -107,6 +113,7 @@ Grid.propTypes = {
     deleteRow:PropTypes.func.isRequired,
     updateCell:PropTypes.func.isRequired,
     updateSort : PropTypes.func.isRequired,
-    deleteCol : PropTypes.func.isRequired
+    deleteCol : PropTypes.func.isRequired,
+    addNew : PropTypes.func.isRequired
 };
 

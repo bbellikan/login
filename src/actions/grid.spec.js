@@ -54,4 +54,10 @@ describe('Grid actions', () => {
         });
     });
 
+    it('addNew should create ADD_NEW action', () => {
+        expect(actions.addNew()).toEqual({
+            type: types.ADD_NEW
+        });
+    });
+
 });

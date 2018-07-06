@@ -2,18 +2,14 @@ import React from 'react';
 import configureStore from 'redux-mock-store';
 import { shallow } from 'enzyme';
 
-import DashboardContainer from './LoginContainer';
+import LoginContainer from './LoginContainer';
 
 const setup = (setupProps = {}) => {
     const initialState = {
-        dashboard: {filter : ''},
-        states:{statesData : {}},
-        population: {populationData: []},
-        jobs: {jobsData: []},
-        nurse: {nurseData: []}
+        login : 'login'
     };
     const store = configureStore()({...initialState});
-    const wrapper = shallow(<DashboardContainer store={store}/>);
+    const wrapper = shallow(<LoginContainer store={store}/>);
 
     return {
         store,
@@ -21,7 +17,7 @@ const setup = (setupProps = {}) => {
     };
 };
 
-describe('DashboardContainer', () => {
+describe('LoginContainer', () => {
   test('renders without crashing', () => {
     const { wrapper } = setup();
     expect(wrapper).toMatchSnapshot();

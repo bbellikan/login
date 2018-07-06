@@ -59,6 +59,16 @@ const gridData = (state = initialState, action) => {
             newArray.splice(action.rowNumber, 1);
             return newArray;
 
+        case actionTypes.ADD_NEW:
+            newArray = state.map(item => item);
+            newArray.push({type: '',
+                extdesc: '',
+                description: '',
+                amount: '',
+                differed: false,
+                date: ''});
+            return newArray;
+
         case actionTypes.UPDATE_CELL:
             newArray = state.map(item => item);
             newArray[action.rowNumber][action.header] = action.value;

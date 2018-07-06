@@ -1,37 +1,26 @@
-## Data visualisation
+## Simple Login & Grid
 
- - This application is intended to demostrate a front-end which visualises data about US states:
-    - Uses React & Redux & Immutable.JS javascript libraries,
+ - This application is intended to demostrate a front-end to be able to log in and out and create a grid to display the sample data:
+    - Uses React & Redux javascript libraries,
     - Uses Jest testing library,
     - Uses react-bootstrap responsive components,
-    - Uses chartist responsive data visualisation library,
-    - Monitors the sass files and producess the css files automatically (crrently no custom css),
-    - Contains a search field through which a user can search for a particular state,
-    - Connected to the jobs.search.gov via cors enabled backend application,
-    - Runs in a docker
+    - Monitors the sass files and producess the css files automatically,
+    - Can run in a docker
     
  - Prerequisites
-    - git, Node.js, yarn, docker
+    - git, Node.js, yarn, docker(optional)
 
 ## Getting Started
 
-### `git clone https://github.com/bbellikan/dashboard.git`<br>
-### `cd dashboard`<br>
+### `git clone https://github.com/bbellikan/login.git`<br>
+### `cd login`<br>
 
-## Dashboard install
+## Login install
 ### `yarn install`<br>
-
-## Install backend and run with node.js
-### `cd backend`<br>
-### `yarn install`<br>
-### `node server.js`<br>
-You should see the message:<br>
-CORS-enabled web server listening on port 8080<br>
-Data files and API fetches are served by the backend application<br>
 
 ## Available Scripts
 
-In the dashboard project directory, you can run:
+In the project directory, you can run:
 
 ### `yarn start`
 
@@ -48,12 +37,27 @@ The build is minified and the filenames include the hashes.<br>
 ### `yarn test`
 
 Testing: Capture snapshots of React trees or other serializable values to simplify testing and to analyze how state changes over time.<br>
+Test Results:<br>
+ PASS  src\components\Menubar.spec.js<br>
+ PASS  src\containers\LoginContainer.spec.js<br>
+ PASS  src\components\App.spec.js<br>
+ PASS  src\containers\GridContainer.spec.js<br>
+ PASS  src\actions\grid.spec.js<br>
+ PASS  src\components\Col.spec.js<br>
+ PASS  src\reducers\gridCols.spec.js<br>
+ PASS  src\components\Editable.spec.js<br>
+ PASS  src\reducers\login.spec.js<br>
+ PASS  src\reducers\gridData.spec.js<br>
+ PASS  src\components\ColDelete.spec.js<br>
+ PASS  src\actions\login.spec.js<br>
+ PASS  src\components\CellHeader.spec.js<br>
 
+Test Suites: 13 passed, 13 total<br>
+Tests:       23 passed, 23 total<br>
+Snapshots:   9 passed, 9 total<br>
+Time:        1.73s<br>
 
-## Dockerizing the applicaiton
-Fallowing the article on the below link, a dockerized build is created; <br>
-[https://medium.com/ai2-blog/dockerizing-a-react-application-3563688a2378](https://medium.com/ai2-blog/dockerizing-a-react-application-3563688a2378)
-
+## Dockerizing the applicaiton (optional)
 (on ubuntu you may be required to run the fallowing commands starting with sudo)<br>
 ### `time docker build -t react-docker .`
 Successfully built 2430a7febd88

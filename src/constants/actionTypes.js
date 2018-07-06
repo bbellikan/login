@@ -5,6 +5,7 @@ export const DELETE_ROW = 'DELETE_ROW';
 export const DELETE_COL = 'DELETE_COL';
 export const UPDATE_CELL = 'UPDATE_CELL';
 export const UPDATE_SORT = 'UPDATE_SORT';
+export const ADD_NEW = 'ADD_NEW';
 
 
 export const LOGIN = 'LOGIN';

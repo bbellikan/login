@@ -5,8 +5,10 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Menubar
-    applyFilter={[Function]}
-    filter="LA"
+    login="login"
+    loginaction={[Function]}
+    logoutaction={[Function]}
+    onClick={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -46,7 +48,7 @@ ShallowWrapper {
                               eventKey="none"
                               href="#"
                     >
-                              Not logged in
+                              Logged in by login
                     </NavItem>
           </Nav>
           <NavbarForm
@@ -161,7 +163,7 @@ ShallowWrapper {
                             eventKey="none"
                             href="#"
               >
-                            Not logged in
+                            Logged in by login
               </NavItem>
 </Nav>,
             <NavbarForm
@@ -210,7 +212,7 @@ ShallowWrapper {
                 eventKey="none"
                 href="#"
 >
-                Not logged in
+                Logged in by login
 </NavItem>,
               "justified": false,
               "pullLeft": false,
@@ -224,13 +226,13 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "active": false,
-                "children": "Not logged in",
+                "children": "Logged in by login",
                 "disabled": false,
                 "eventKey": "none",
                 "href": "#",
               },
               "ref": null,
-              "rendered": "Not logged in",
+              "rendered": "Logged in by login",
               "type": [Function],
             },
             "type": [Function],
@@ -366,7 +368,7 @@ ShallowWrapper {
                                     eventKey="none"
                                     href="#"
                         >
-                                    Not logged in
+                                    Logged in by login
                         </NavItem>
             </Nav>
             <NavbarForm
@@ -481,7 +483,7 @@ ShallowWrapper {
                                 eventKey="none"
                                 href="#"
                 >
-                                Not logged in
+                                Logged in by login
                 </NavItem>
 </Nav>,
               <NavbarForm
@@ -530,7 +532,7 @@ ShallowWrapper {
                   eventKey="none"
                   href="#"
 >
-                  Not logged in
+                  Logged in by login
 </NavItem>,
                 "justified": false,
                 "pullLeft": false,
@@ -544,13 +546,13 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "active": false,
-                  "children": "Not logged in",
+                  "children": "Logged in by login",
                   "disabled": false,
                   "eventKey": "none",
                   "href": "#",
                 },
                 "ref": null,
-                "rendered": "Not logged in",
+                "rendered": "Logged in by login",
                 "type": [Function],
               },
               "type": [Function],

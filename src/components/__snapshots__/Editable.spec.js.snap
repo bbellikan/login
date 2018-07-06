@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Editable renders without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Editable
+    gridCol={
+        Object {
+            "deleted": false,
+            "header": "type",
+            "inputType": "text",
+            "number": 0,
+            "order": 0,
+            "sort": "n",
+            "type": "STRING",
+            "width": 150,
+          }
+    }
+    rowNumber={0}
+    updateCell={[Function]}
+    value="POS"
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": "POS",
+      "className": "cell",
+      "onClick": [Function],
+    },
+    "ref": null,
+    "rendered": "POS",
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": "POS",
+        "className": "cell",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": "POS",
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
